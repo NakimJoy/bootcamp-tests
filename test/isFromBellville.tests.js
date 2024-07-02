@@ -1,0 +1,1 @@
+console.log(isFromBellville('GP24'));
