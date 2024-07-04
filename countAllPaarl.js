@@ -1,20 +1,18 @@
-function allPaarl(param) {
-    // Split the input string by comma and space
-    var listToSplit = param.split(", ");
+function countAllPaarl(reg_numbers) {
+    // Split the input string by commas
+    const reg_list = reg_numbers.split(', ');
 
-    // Initialize an empty list to store results
-    const arrayForPushTo = [];
+    // Initialize a counter for Paarl registration numbers
+    let count = 0;
 
-    // Iterate over each element in the list
-    for (var i = 0; i < listToSplit.length; i++) {
-        var result = listToSplit[i];
-
-        // Check if the element starts with 'CJ'
-        if (result.startsWith('CJ')) {
-            arrayForPushTo.push(result);
+    // Iterate through the list of registration numbers
+    for (const reg of reg_list) {
+        // Check if the registration number starts with 'CJ'
+        if (reg.startsWith('CJ')) {
+            count++; // Increment the counter for each Paarl registration number
         }
     }
 
-    // Return the filtered list
-    return arrayForPushTo;
+    // Return the total count of Paarl registration numbers
+    return count;
 }
